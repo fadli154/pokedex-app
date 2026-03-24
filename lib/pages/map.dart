@@ -66,9 +66,6 @@ class _MyMapState extends State<MyMap> {
               provinceId = value?.id;
 
               selectedCity = null;
-
-              print(selectedCity?.code);
-              print(selectedProvince?.id);
             },
 
             compareFn: (item1, item2) => item1.id == item2.id,
@@ -100,9 +97,6 @@ class _MyMapState extends State<MyMap> {
                 setState(() {
                   selectedCity = value;
                 });
-
-                print(selectedCity?.code);
-                print(selectedProvince?.id);
               },
 
               compareFn: (item1, item2) => item1.code == item2.code,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:package_flutter/pages/home_page.dart';
+import 'package:package_flutter/intro_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,6 +10,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const IntroPage(), // Tindahin ke sini
+    );
   }
 }

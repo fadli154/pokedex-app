@@ -3,8 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:package_flutter/models/pokemon_model.dart';
-import 'package:package_flutter/partials/drawer.dart';
-import 'package:package_flutter/partials/navigation_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -30,31 +28,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Basic Gradient AppBar example
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(
-          "Pokemon App",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: Colors.transparent, // Required
-        elevation: 0,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.red, Colors.amber],
-              begin: Alignment.centerLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-        ),
-      ),
-
       body: FutureBuilder(
         future: getAllPokemon(),
         builder: (context, snapshot) {
@@ -98,10 +71,6 @@ class HomePage extends StatelessWidget {
           );
         },
       ),
-
-      bottomNavigationBar: MyNavigationBar(),
-
-      drawer: MyDrawer(),
     );
   }
 }

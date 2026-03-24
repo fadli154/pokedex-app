@@ -1,16 +1,20 @@
 name: package_flutter
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
   sdk: ^3.10.8
 
 dependencies:
+  avatar_glow: ^3.0.1
   convex_bottom_bar: ^3.2.0
+  dropdown_search: ^6.0.2
   flutter:
     sdk: flutter
   http: ^1.6.0
+  introduction_screen: ^4.0.0
+  lottie: ^3.3.2
 
 dev_dependencies:
   flutter_lints: ^6.0.0
@@ -19,3 +23,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/lotties/
